@@ -15,7 +15,7 @@ def create
       @collagephoto.save
     end
 
-    redirect_to root_path
+    redirect_to collages_path
 
 end
 

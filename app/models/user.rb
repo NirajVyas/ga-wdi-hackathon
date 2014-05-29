@@ -55,6 +55,7 @@ class User < ActiveRecord::Base
             user.email = "test@test.com"
             user.image = auth.info.image
             user.password = Devise.friendly_token[0,20]
+            user.facebook_token = auth.credentials.token
 
         end
       end 

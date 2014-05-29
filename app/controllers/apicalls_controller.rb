@@ -13,6 +13,7 @@ class ApicallsController < ApplicationController
     # facebook_api_url = "https://graph.facebook.com/me/photos?access_token=" + current_user.facebook_token 
     @graph = Koala::Facebook::API.new(current_user.facebook_token)
     @facebook_data =  @graph.get_connections(current_user.uid, "photos")
+ 
     # @facebook_data = HTTParty.get instagram_api_url
     # puts response.body, response.code, response.message, response.headers.inspect
     @a = []

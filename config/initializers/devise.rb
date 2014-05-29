@@ -230,7 +230,7 @@ Devise.setup do |config|
 
   config.omniauth :twitter, ENV["AUTH_TWITTER_KEY"], ENV["AUTH_TWITTER_SECRET"]
   config.omniauth :google_oauth2,ENV["AUTH_GOOGLE_KEY"], ENV["AUTH_GOOGLE_SECRET"]
-  config.omniauth :facebook, ENV["AUTH_FACEBOOK_KEY"], ENV["AUTH_FACEBOOK_SECRET"]
+  config.omniauth :facebook, ENV["AUTH_FACEBOOK_KEY"], ENV["AUTH_FACEBOOK_SECRET"] 
   config.omniauth :github, ENV["AUTH_GITHUB_KEY"], ENV["AUTH_GITHUB_SECRET"]
   config.omniauth :linkedin, ENV["AUTH_LINKEDIN_KEY"], ENV["AUTH_LINKEDIN_SECRET"]
   config.omniauth :instagram, ENV["AUTH_INSTAGRAM_KEY"], ENV["AUTH_INSTAGRAM_SECRET"]

@@ -22626,6 +22626,7 @@ Served asset /contacts.js - 304 Not Modified (0ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:10:49 +0100
 Served asset /application.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+<<<<<<< HEAD
 Connecting to database specified by database.yml
 
 
@@ -22694,10 +22695,88 @@ Completed 302 Found in 94.6ms (ActiveRecord: 5.0ms)
 
 
 Started GET "/" for 127.0.0.1 at 2014-05-29 17:13:34 +0100
+=======
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateContacts (20130727153010)
+Migrating to DeviseCreateUsers (20140513141044)
+Migrating to AddImageToUsers (20140513212225)
+Migrating to AddProviderToUser (20140529153314)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:25:50 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 36.7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:25:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (3.0ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (9.0ms)
+Compiled jquery.js  (4ms)  (pid 81330)
+Compiled jquery_ujs.js  (0ms)  (pid 81330)
+Compiled application.js  (153ms)  (pid 81330)
+Completed 200 OK in 285.6ms (Views: 213.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /contacts.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /contacts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:25:51 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2014-05-29 17:26:12 +0100
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=8xt1XJrsLRLVOKWfK0U9kjbSiSetyKgyq5XcTCnUxDI&oauth_verifier=NTe1Nnv9ySI8pjYPTjFxduEOgqFqwhjMct2J6xkA4M" for 127.0.0.1 at 2014-05-29 17:26:14 +0100
+Processing by OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"8xt1XJrsLRLVOKWfK0U9kjbSiSetyKgyq5XcTCnUxDI", "oauth_verifier"=>"NTe1Nnv9ySI8pjYPTjFxduEOgqFqwhjMct2J6xkA4M"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'noor_bl@twitter.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'noor_bl@twitter.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "facebook_token", "github_token", "google_oauth2_token", "image", "instagram_token", "last_sign_in_at", "last_sign_in_ip", "linkedin_token", "provider", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "twitter_token", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 29 May 2014 16:26:15 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "noor_bl@twitter.com"], ["encrypted_password", "$2a$10$AIyZc7EEzFfWKPxuuLKQn.42klHUO.fe7Bm7SpqXPndqiPoVYxM3G"], ["facebook_token", nil], ["github_token", nil], ["google_oauth2_token", nil], ["image", "http://pbs.twimg.com/profile_images/445689985685942272/atmtCVLx_normal.png"], ["instagram_token", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["linkedin_token", nil], ["provider", "twitter"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["twitter_token", nil], ["uid", "210869563"], ["updated_at", Thu, 29 May 2014 16:26:15 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-05-29 16:26:15.826102', "current_sign_in_at" = '2014-05-29 16:26:15.826102', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-05-29 16:26:15.826881' WHERE "users"."id" = 23[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 107.9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
 Processing by ContactsController#index as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
   [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" 
   Rendered contacts/index.html.erb within layouts/application (1.1ms)
+<<<<<<< HEAD
 Completed 200 OK in 43.0ms (Views: 40.3ms | ActiveRecord: 0.4ms)
 
 
@@ -22732,10 +22811,148 @@ Served asset /application.js - 304 Not Modified (0ms)
 Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:13:36 +0100
 Processing by Devise::SessionsController#destroy as HTML
   Parameters: {"authenticity_token"=>"cl1ZW7bqQAvcIdHeBShOdWesqleKee2pbRJubLUMHo8="}
+=======
+Completed 200 OK in 9.8ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:15 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:26:17 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BbGzX1TVPGWBNehEQ8spEdQkgVreKL6LNydcHWhLV1A="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38.2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:17 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:26:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9.4ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/twitter" for 127.0.0.1 at 2014-05-29 17:26:19 +0100
+
+
+Started GET "/users/auth/twitter/callback?oauth_token=ToU3a8CSyl7Mza9IAEVHXdlLspNqIRfL8808n3hnE6o&oauth_verifier=ktWHmfljTKRsDkeSIiAVMN4jW4U7Ju4sN61l68mLZw" for 127.0.0.1 at 2014-05-29 17:26:20 +0100
+Processing by OmniauthCallbacksController#twitter as HTML
+  Parameters: {"oauth_token"=>"ToU3a8CSyl7Mza9IAEVHXdlLspNqIRfL8808n3hnE6o", "oauth_verifier"=>"ktWHmfljTKRsDkeSIiAVMN4jW4U7Ju4sN61l68mLZw"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'noor_bl@twitter.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "instagram_token" = '210869563-R3i3qqIOTJc9AW5nDJ5HwUOdqasPLsnuUdeaSYZb', "current_sign_in_at" = '2014-05-29 16:26:21.640683', "sign_in_count" = 2, "updated_at" = '2014-05-29 16:26:21.641181' WHERE "users"."id" = 23[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6.1ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" 
+  Rendered contacts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6.2ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wU5FDjrmS6MGwHLn6nyivGmL+QPHRmUz8gvTcEugbfI="}
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
 Redirected to http://localhost:3000/
+<<<<<<< HEAD
 Completed 302 Found in 4.7ms (ActiveRecord: 0.2ms)
 
 
@@ -22798,11 +23015,81 @@ Completed 302 Found in 5.9ms (ActiveRecord: 2.8ms)
 Started GET "/" for 127.0.0.1 at 2014-05-29 17:13:39 +0100
 Processing by ContactsController#index as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1
+=======
+Completed 302 Found in 3.1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9.9ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/instagram" for 127.0.0.1 at 2014-05-29 17:26:25 +0100
+
+
+Started GET "/users/auth/instagram/callback?code=a2148b905aa945de9881e33cef1fbacd&state=a4bbe70abf985c41a2c97929b2a8303cfa281ad2a8562bcb" for 127.0.0.1 at 2014-05-29 17:26:28 +0100
+Processing by OmniauthCallbacksController#instagram as HTML
+  Parameters: {"code"=>"a2148b905aa945de9881e33cef1fbacd", "state"=>"a4bbe70abf985c41a2c97929b2a8303cfa281ad2a8562bcb"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'noorbl@instagram.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'noorbl@instagram.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "facebook_token", "github_token", "google_oauth2_token", "image", "instagram_token", "last_sign_in_at", "last_sign_in_ip", "linkedin_token", "provider", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "twitter_token", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 29 May 2014 16:26:29 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "noorbl@instagram.com"], ["encrypted_password", "$2a$10$7FIB9MeYtCVhgsNlv.DwWuTqArNB4pLdZtvaKS86vaKWqAz.Fyt2S"], ["facebook_token", nil], ["github_token", nil], ["google_oauth2_token", nil], ["image", "http://images.ak.instagram.com/profiles/profile_10726311_75sq_1386946382.jpg"], ["instagram_token", "10726311.8f4a0e3.bdefeb852e534fc9811ad18aa7a9fa38"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["linkedin_token", nil], ["provider", "instagram"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["twitter_token", nil], ["uid", "10726311"], ["updated_at", Thu, 29 May 2014 16:26:29 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-05-29 16:26:29.989977', "current_sign_in_at" = '2014-05-29 16:26:29.989977', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-05-29 16:26:29.990508' WHERE "users"."id" = 24
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 79.7ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:29 +0100
+Processing by ContactsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 24 LIMIT 1
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" [0m
   Rendered contacts/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 5.8ms (Views: 4.5ms | ActiveRecord: 0.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:13:39 +0100
 Served asset /application.css - 304 Not Modified (11ms)
 
@@ -31892,6 +32179,1044 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   actionpack (3.2.18) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (3.2.18) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
   activesupport (3.2.18) lib/active_support/callbacks.rb:414:in `_run__4063661436879103966__process_action__4128005171079100571__callbacks'
+=======
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:30 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:26:31 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tiYaoj+2+kJj4jR1XG9R3OeeZe8RHpNT2bUDklkhJh4="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 24 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4.4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:31 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:26:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.6ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10.3ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/linkedin" for 127.0.0.1 at 2014-05-29 17:26:33 +0100
+
+
+Started GET "/users/auth/linkedin/callback?code=AQTzgmn6CrIl8EVXntrTmGz7UuvZ94xxoD6OBJgYEs7IAC2t9ND2EaY45NFzbAsx2anwf167LWs4q-BY7o9qlJTESnZJCGD6edVlaH3GT0J3QlPhDpI&state=60fd0e269cb7f947ae2ea7ac1591638cf565fe533887185d" for 127.0.0.1 at 2014-05-29 17:26:33 +0100
+Processing by OmniauthCallbacksController#linkedin as HTML
+  Parameters: {"code"=>"AQTzgmn6CrIl8EVXntrTmGz7UuvZ94xxoD6OBJgYEs7IAC2t9ND2EaY45NFzbAsx2anwf167LWs4q-BY7o9qlJTESnZJCGD6edVlaH3GT0J3QlPhDpI", "state"=>"60fd0e269cb7f947ae2ea7ac1591638cf565fe533887185d"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'noorbinladin@hotmail.com' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'linkedin' AND "users"."uid" = 'ZkzKaU-gSo' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'noorbinladin@hotmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "facebook_token", "github_token", "google_oauth2_token", "image", "instagram_token", "last_sign_in_at", "last_sign_in_ip", "linkedin_token", "provider", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "twitter_token", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 29 May 2014 16:26:36 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "noorbinladin@hotmail.com"], ["encrypted_password", "$2a$10$S3MGBpDWs65jAgR4pKxB/eCPHcri3xZIHAC3V/PghpZiOjpxsLkXi"], ["facebook_token", nil], ["github_token", nil], ["google_oauth2_token", nil], ["image", "http://m.c.lnkd.licdn.com/mpr/mprx/0_yq555n-7_EbugjxMpvkV5zvfT7_8xZ7MYnlV5zqxYuBK8pZJr-vWIv8l7FixpxmvgcbUEtE4EzYM"], ["instagram_token", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["linkedin_token", nil], ["provider", "linkedin"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["twitter_token", nil], ["uid", "ZkzKaU-gSo"], ["updated_at", Thu, 29 May 2014 16:26:36 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-05-29 16:26:36.371039', "current_sign_in_at" = '2014-05-29 16:26:36.371039', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-05-29 16:26:36.371404' WHERE "users"."id" = 25
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 78.0ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Processing by ContactsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" [0m
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6.0ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BE6mSs6e54BxWuwf59WdG+8aZZbJFKBEs3oGpexPTgQ="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3.2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.4ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 9.2ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /contacts.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:37 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 17:26:42 +0100
+
+
+Started GET "/users/auth/github/callback?code=8fce193738fc5237ca4d&state=ebe54881debbde1a787889a113d084f25573a897cfcc98f2" for 127.0.0.1 at 2014-05-29 17:26:43 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"8fce193738fc5237ca4d", "state"=>"ebe54881debbde1a787889a113d084f25573a897cfcc98f2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '6919803' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 72.4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.6ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 54.2ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:44 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 17:26:46 +0100
+
+
+Started GET "/users/auth/facebook/callback?error_code=1349126&error_message=App%20Not%20Setup%3A%20The%20developers%20of%20this%20app%20have%20not%20set%20up%20this%20app%20properly%20for%20Facebook%20Login.&state=ecd24f0090627fe743c4f7e3bc1cb5262ac0b169c014a4b7" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Processing by OmniauthCallbacksController#failure as HTML
+  Parameters: {"error_code"=>"1349126", "error_message"=>"App Not Setup: The developers of this app have not set up this app properly for Facebook Login.", "state"=>"ecd24f0090627fe743c4f7e3bc1cb5262ac0b169c014a4b7"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 13.3ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:26:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2014-05-29 17:26:51 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.4ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.4ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 10.2ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:27:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:27:21 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:27:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 83.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (6.8ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 244.7ms (Views: 121.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /contacts.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /contacts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:39:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 17:39:03 +0100
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 35.4ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.7ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 116.8ms (Views: 57.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /contacts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /contacts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:47:22 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 17:47:25 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.8ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 10.5ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 17:48:25 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQClneAWXac84kDhEQR8ZoOq3ElZo18vyUrcDCgdM7BCLhqMTCpSETP9UWon3JxexKi7TlJEdZHm-PoS04FoqSckMSDnYKEAYmDusKRIf_qvV3umWIQo5AX421wAuqqK7IkphdUHs-tVcGQxnqFbG5cIv0V2900uv-HvMOFWuOFVuXSKJa21j3b3rfLQr9suJwxgdlvHRgPB-gVMAlHjiNI-wHEYGFgEftLgBOfcezzHuv0Zk4JjFpdywUEM47YyuoTiYqsBvj89Kg3s5WpsP-5gyxNgoPjwOxnQMkqll0wLKJkYdi92kold1A1f5DlYtjk&state=809eaeec3810f2fe8e577ccb66287edf1d9c59d30a494bdb" for 127.0.0.1 at 2014-05-29 17:48:31 +0100
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQClneAWXac84kDhEQR8ZoOq3ElZo18vyUrcDCgdM7BCLhqMTCpSETP9UWon3JxexKi7TlJEdZHm-PoS04FoqSckMSDnYKEAYmDusKRIf_qvV3umWIQo5AX421wAuqqK7IkphdUHs-tVcGQxnqFbG5cIv0V2900uv-HvMOFWuOFVuXSKJa21j3b3rfLQr9suJwxgdlvHRgPB-gVMAlHjiNI-wHEYGFgEftLgBOfcezzHuv0Zk4JjFpdywUEM47YyuoTiYqsBvj89Kg3s5WpsP-5gyxNgoPjwOxnQMkqll0wLKJkYdi92kold1A1f5DlYtjk", "state"=>"809eaeec3810f2fe8e577ccb66287edf1d9c59d30a494bdb"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'noorbinladin@hotmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "provider" = 'facebook', "uid" = '10152609462879928', "image" = 'http://graph.facebook.com/10152609462879928/picture', "facebook_token" = 'CAAEr2HimZBtYBAL7DZCicVtgz7VUB6pYOIuIs6wvcVNE0NlZByJ7kp4A0248im8G7ZBbARujtHfXr5ryAcMDHY6waNErOIAp6OG0wF2YM51nY3Vscp3IutHaJNrsnTt18f3AXCCQBvmZB1q0SbLvGax11ZBlsZCSq50eLc1vsHgFztQ01aVL52f', "current_sign_in_at" = '2014-05-29 16:48:33.081321', "sign_in_count" = 2, "updated_at" = '2014-05-29 16:48:33.082875' WHERE "users"."id" = 25[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18.8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" 
+  Rendered contacts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10.6ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:48:33 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SDapQBMirXo9mBw2d5PXSmlavJCWPzQ09DJZyNkdnP8="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5.2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 8.7ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:51:17 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 42.1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (3.3ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 128.0ms (Views: 61.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /contacts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:58:55 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 17:58:58 +0100
+
+
+Started GET "/users/auth/facebook/callback?error_code=1349126&error_message=App%20Not%20Setup%3A%20The%20developers%20of%20this%20app%20have%20not%20set%20up%20this%20app%20properly%20for%20Facebook%20Login.&state=17e5ef278a2bddac49998383fb285e21052057d16a8bb0f0" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Processing by OmniauthCallbacksController#failure as HTML
+  Parameters: {"error_code"=>"1349126", "error_message"=>"App Not Setup: The developers of this app have not set up this app properly for Facebook Login.", "state"=>"17e5ef278a2bddac49998383fb285e21052057d16a8bb0f0"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10.5ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 17:59:03 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:01:45 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 34.9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 18:01:45 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.8ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 115.9ms (Views: 58.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /contacts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:46 +0100
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 18:01:48 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQDUVD_9IAFFrH6q0o0lwrMmtJeKo2Zee4rE1WHRtUcst3SM29TbMijaUXW7_u5m1GUJX-y0gBjauzsGNEkwbjEc4irJ1tgA8CmXYucZJsB4tBW1YBPC7q56ymxJ5Zyrj3qH4l0HINyXJT8h824DBpoBG8-Muz5BGyjYi5LJ8gMG_8WSOoYFJoypaUAxsCkidLZlpJM6-g92LAYSks1KJ8JT405DoJUZoBJnjR8At08tniCoy3Q5zVS2UCitWy7klmN__inJEWxYHbAfQhDj_ZthTYtska-_7Nha8zfl4YHaBTI_6r8vgmFgE5hx01pdJl0&state=aea9415ae7a5718ffab9b3a2c18a16afbacb5b9ed7303d67" for 127.0.0.1 at 2014-05-29 18:01:49 +0100
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDUVD_9IAFFrH6q0o0lwrMmtJeKo2Zee4rE1WHRtUcst3SM29TbMijaUXW7_u5m1GUJX-y0gBjauzsGNEkwbjEc4irJ1tgA8CmXYucZJsB4tBW1YBPC7q56ymxJ5Zyrj3qH4l0HINyXJT8h824DBpoBG8-Muz5BGyjYi5LJ8gMG_8WSOoYFJoypaUAxsCkidLZlpJM6-g92LAYSks1KJ8JT405DoJUZoBJnjR8At08tniCoy3Q5zVS2UCitWy7klmN__inJEWxYHbAfQhDj_ZthTYtska-_7Nha8zfl4YHaBTI_6r8vgmFgE5hx01pdJl0", "state"=>"aea9415ae7a5718ffab9b3a2c18a16afbacb5b9ed7303d67"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'noorbinladin@hotmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "facebook_token" = 'CAAEr2HimZBtYBAFntELXvK4R6fXrut0X4LEt9ZAwLImB5QDYDbt3LaqZCEaIB7AcOreEi2cuvEHBNDwZAGdpinBrZBK7gMXn8IEZAzuCWeSFAleweIXdoAsYGoEUt2RtxYf6N4KIvHuzaHokJ6ErZAn4EaIL6ZAfkgbos7TJQp6Dwa0P0jQWpUyS', "last_sign_in_at" = '2014-05-29 16:48:33.081321', "current_sign_in_at" = '2014-05-29 17:01:50.626662', "sign_in_count" = 3, "updated_at" = '2014-05-29 17:01:50.628223' WHERE "users"."id" = 25[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 13.2ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" 
+  Rendered contacts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41.9ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /contacts.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:01:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qnfqRRMKJ6DuGg32KXozgqhjD3xaY8XHPshFUr8WiNw="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5.8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8.8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /contacts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-05-29 18:07:14 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQDqj-sK_sOKWWcPjk8y85_5okdl4rpBlG-WXdvMVJa7PUKGwuu9S62HkWc1l797tRhjPsMe-4ROXI-gg1WUTFPr1K_WnGsbUhfywxaZaFmrizQ9MZ1m7cISEcoNfnpEpuI8AcLOLnWQCYW1yLtnO-Hv6s4IwPi4gQZrY-X8LEXxhdj1wNHsk61vxNXy6RGZ_hMUEOx5lPkKKFqrvc3B-W9SGIIuVqOdewr6PbUoSL7u-Wu-1yz97Ele6ZCvQ_raRCXyjbmadXCVhNW3HbvmUWU4TxmvrPMLw_ctU9ttWRdmjPL4Eu1DOSvAAAcTfKPTD7I&state=468703bbeda46363131d92f1444241be5788abf45203acba" for 127.0.0.1 at 2014-05-29 18:07:15 +0100
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDqj-sK_sOKWWcPjk8y85_5okdl4rpBlG-WXdvMVJa7PUKGwuu9S62HkWc1l797tRhjPsMe-4ROXI-gg1WUTFPr1K_WnGsbUhfywxaZaFmrizQ9MZ1m7cISEcoNfnpEpuI8AcLOLnWQCYW1yLtnO-Hv6s4IwPi4gQZrY-X8LEXxhdj1wNHsk61vxNXy6RGZ_hMUEOx5lPkKKFqrvc3B-W9SGIIuVqOdewr6PbUoSL7u-Wu-1yz97Ele6ZCvQ_raRCXyjbmadXCVhNW3HbvmUWU4TxmvrPMLw_ctU9ttWRdmjPL4Eu1DOSvAAAcTfKPTD7I", "state"=>"468703bbeda46363131d92f1444241be5788abf45203acba"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'noorbinladin@hotmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "facebook_token" = 'CAAEr2HimZBtYBALLSiNTeHZC1bwzWHrxib8rm3sulvCaMh2c1UXZBfKOArszac1uTSBGZAWe4tAw8DVz0ZAj2pZCqNiUZAj94WfUS0ZCs2xYpwmzRRDO10x7ZCHYYsDX16E5o6Nxzexek7KKPjAiqZAQUSr3O8iZA1oxJx1x8BB32l1asnjwodITUnG', "last_sign_in_at" = '2014-05-29 17:01:50.626662', "current_sign_in_at" = '2014-05-29 17:07:16.782211', "sign_in_count" = 4, "updated_at" = '2014-05-29 17:07:16.782783' WHERE "users"."id" = 25
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5.7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Processing by ContactsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" [0m
+  Rendered contacts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.7ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:07:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fYUPq9fMNEgmWCOxEJ9T6cM/xRtu+vOldBbHNKj3t+I="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 25 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4.6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9.5ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:23:17 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.3ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 12.5ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:31:40 +0100
+
+
+Started GET "/users/auth/github/callback?code=fefeea04bf8af44e5cb5&state=d319498fa5b0154230de07ede453a201ec9f7d8ee52f2e55" for 127.0.0.1 at 2014-05-29 18:31:40 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"fefeea04bf8af44e5cb5", "state"=>"d319498fa5b0154230de07ede453a201ec9f7d8ee52f2e55"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '6919803' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 76.8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11.1ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /contacts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:31:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:32:16 +0100
+
+
+Started GET "/users/auth/github/callback?code=6677832dc23551267f22&state=e2b956c13dd430db8107f21f5ec114897cf5a94797998747" for 127.0.0.1 at 2014-05-29 18:32:16 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"6677832dc23551267f22", "state"=>"e2b956c13dd430db8107f21f5ec114897cf5a94797998747"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '6919803' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 106.4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8.9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /contacts.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:32:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2014-05-29 18:33:17 +0100
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:33:56 +0100
+
+
+Started GET "/users/auth/github/callback?code=897f40cf462a80c6fb2e&state=9b07e3b0ec921f1fd6f39c06b56d53de71ecb6b43a2816cf" for 127.0.0.1 at 2014-05-29 18:33:57 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"897f40cf462a80c6fb2e", "state"=>"9b07e3b0ec921f1fd6f39c06b56d53de71ecb6b43a2816cf"}
+Completed 500 Internal Server Error in 7.4ms
+
+RuntimeError - :
+  app/models/user.rb:13:in `from_omniauth'
+  app/controllers/omniauth_callbacks_controller.rb:41:in `github'
+  actionpack (3.2.18) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.18) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.18) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:436:in `_run__521007462597300746__process_action__3890973940757069059__callbacks'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
   activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
   activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
@@ -31911,6 +33236,10 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   actionpack (3.2.18) lib/action_controller/metal.rb:246:in `block in action'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:36:in `call'
+<<<<<<< HEAD
+=======
+  actionpack (3.2.18) lib/action_dispatch/routing/mapper.rb:43:in `call'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   journey (1.0.4) lib/journey/router.rb:68:in `block in call'
   journey (1.0.4) lib/journey/router.rb:56:in `call'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:608:in `call'
@@ -31918,7 +33247,15 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+<<<<<<< HEAD
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+=======
+  omniauth (1.2.1) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:184:in `call!'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
@@ -31940,7 +33277,11 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   activerecord (3.2.18) lib/active_record/query_cache.rb:64:in `call'
   activerecord (3.2.18) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
   actionpack (3.2.18) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+<<<<<<< HEAD
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `_run__934213089230323803__call__340616863635083729__callbacks'
+=======
+  activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `_run__2336574563245314221__call__2974959488489342480__callbacks'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
   activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
   activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
@@ -31967,6 +33308,7 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   rack (1.4.5) lib/rack/content_length.rb:14:in `call'
   railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
   rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+<<<<<<< HEAD
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
@@ -32047,6 +33389,126 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   actionpack (3.2.18) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (3.2.18) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
   activesupport (3.2.18) lib/active_support/callbacks.rb:414:in `_run__4063661436879103966__process_action__4128005171079100571__callbacks'
+=======
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70317046504160/variables" for 127.0.0.1 at 2014-05-29 18:33:58 +0100
+
+
+Started POST "/__better_errors/70317046504160/eval" for 127.0.0.1 at 2014-05-29 18:34:05 +0100
+Connecting to database specified by database.yml
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:36:28 +0100
+
+
+Started GET "/users/auth/github/callback?code=68e0de1601f60c20a848&state=122292d27a3a5849f0b7237a573875b69a2d443064001b09" for 127.0.0.1 at 2014-05-29 18:36:28 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"68e0de1601f60c20a848", "state"=>"122292d27a3a5849f0b7237a573875b69a2d443064001b09"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '6919803' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 125.7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 50.9ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (35.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 70.3ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:36:55 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:36:56 +0100
+
+
+Started GET "/users/auth/github/callback?code=a7d3456c8a00409f482f&state=4284fcf8cf1479adfc582c7998f1ad8d0d03a8f6323a6a34" for 127.0.0.1 at 2014-05-29 18:36:57 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"a7d3456c8a00409f482f", "state"=>"4284fcf8cf1479adfc582c7998f1ad8d0d03a8f6323a6a34"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2.4ms
+
+RuntimeError - :
+  app/models/user.rb:49:in `from_omniauth'
+  app/controllers/omniauth_callbacks_controller.rb:41:in `github'
+  actionpack (3.2.18) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.18) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.18) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:436:in `_run__521007462597300746__process_action__3890973940757069059__callbacks'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
   activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
   activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
@@ -32066,6 +33528,10 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   actionpack (3.2.18) lib/action_controller/metal.rb:246:in `block in action'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:36:in `call'
+<<<<<<< HEAD
+=======
+  actionpack (3.2.18) lib/action_dispatch/routing/mapper.rb:43:in `call'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   journey (1.0.4) lib/journey/router.rb:68:in `block in call'
   journey (1.0.4) lib/journey/router.rb:56:in `call'
   actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:608:in `call'
@@ -32073,7 +33539,15 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+<<<<<<< HEAD
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+=======
+  omniauth (1.2.1) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:184:in `call!'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
   omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
   omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
@@ -32095,7 +33569,11 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   activerecord (3.2.18) lib/active_record/query_cache.rb:64:in `call'
   activerecord (3.2.18) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
   actionpack (3.2.18) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+<<<<<<< HEAD
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `_run__934213089230323803__call__340616863635083729__callbacks'
+=======
+  activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `_run__2336574563245314221__call__2974959488489342480__callbacks'
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
   activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
   activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
   activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
@@ -32122,6 +33600,7 @@ ActiveRecord::StatementInvalid - SQLite3::SQLException: no such column: current_
   rack (1.4.5) lib/rack/content_length.rb:14:in `call'
   railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
   rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+<<<<<<< HEAD
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
   /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
@@ -32566,4 +34045,384 @@ Served asset /contacts.css - 304 Not Modified (0ms)
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:15:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+=======
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70317045871780/variables" for 127.0.0.1 at 2014-05-29 18:36:58 +0100
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:37:09 +0100
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:37:18 +0100
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:37:24 +0100
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:37:32 +0100
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:37:56 +0100
+
+
+Started POST "/__better_errors/70317045871780/eval" for 127.0.0.1 at 2014-05-29 18:38:21 +0100
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 70.9ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:48 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2014-05-29 18:38:50 +0100
+
+
+Started GET "/users/auth/github/callback?code=1d7bd0c95a9a150819f9&state=ab5f5d6f1de36ef272da06a6f663a2756e6fe5dfbc0b22a6" for 127.0.0.1 at 2014-05-29 18:38:50 +0100
+Processing by OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"1d7bd0c95a9a150819f9", "state"=>"ab5f5d6f1de36ef272da06a6f663a2756e6fe5dfbc0b22a6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'github' AND "users"."uid" = '6919803' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@test.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "facebook_token", "github_token", "google_oauth2_token", "image", "instagram_token", "last_sign_in_at", "last_sign_in_ip", "linkedin_token", "provider", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "twitter_token", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 29 May 2014 17:38:51 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "test@test.com"], ["encrypted_password", "$2a$10$SX62L1KJaVbFnWYkuVwaCOT2TwOwYVxIvtqzlcR15BVVDAxpuNwd."], ["facebook_token", nil], ["github_token", nil], ["google_oauth2_token", nil], ["image", "https://avatars.githubusercontent.com/u/6919803?"], ["instagram_token", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["linkedin_token", nil], ["provider", "github"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["twitter_token", nil], ["uid", "6919803"], ["updated_at", Thu, 29 May 2014 17:38:51 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-05-29 17:38:51.906369', "current_sign_in_at" = '2014-05-29 17:38:51.906369', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-05-29 17:38:51.906976' WHERE "users"."id" = 26
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 93.0ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:38:51 +0100
+Processing by ContactsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT "contacts".* FROM "contacts" [0m
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8.9ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /contacts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:38:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rBeFNWaUr0kXCCIEO4Ut0jqchjHJUAfXSs7i38Cd2r8="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3.4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/noorbinladin/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 11.5ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 18:39:34 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+>>>>>>> 4880955ec7371ac041dafff0d975e7102f023510
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (3.1ms)
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 93.9ms (Views: 65.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /jquery.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /contacts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:10 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (3.0ms)
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 11.5ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /contacts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/auth/instagram" for 127.0.0.1 at 2014-05-29 19:21:14 +0100
+
+
+Started GET "/users/auth/instagram/callback?code=1a019ac7d2d543e4961a9c30775cb64b&state=8e4dbe61f5e9695268ec8acaaa7167473116e76de546cceb" for 127.0.0.1 at 2014-05-29 19:21:14 +0100
+Processing by OmniauthCallbacksController#instagram as HTML
+  Parameters: {"code"=>"1a019ac7d2d543e4961a9c30775cb64b", "state"=>"8e4dbe61f5e9695268ec8acaaa7167473116e76de546cceb"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mrsamuelhill@instagram.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-05-29 18:20:11.405109', "current_sign_in_at" = '2014-05-29 18:21:16.053701', "sign_in_count" = 4, "updated_at" = '2014-05-29 18:21:16.055332' WHERE "users"."id" = 23[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15.9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT "contacts".* FROM "contacts" 
+  Rendered contacts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9.7ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /contacts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/collages" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Processing by CollagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
+  [1m[35mCollagephoto Load (0.2ms)[0m  SELECT "collagephotos".* FROM "collagephotos" WHERE (user_id = 23)
+  Rendered collages/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 52.0ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /contacts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yl61Ruj35zVraiHKFjTCPwpjU01WZrQMY2M16wULhDk="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 23 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4.5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Processing by ContactsController#index as HTML
+Completed 401 Unauthorized in 0.3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/thehills/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9.0ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /contacts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:21:28 +0100
 Served asset /application.js - 304 Not Modified (0ms)

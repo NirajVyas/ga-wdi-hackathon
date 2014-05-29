@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :image, :facebook_token, :twitter_token, :github_token, :instagram_token, :linkedin_token, :google_oauth2_token
   # attr_accessible :title, :body
 
+  has_many :collagephotos
+
   def self.from_omniauth(auth)
     
     twitter_email = if auth.provider =="twitter" then auth.info.nickname.downcase + "@twitter.com" end

@@ -1,32 +1,22 @@
 <div class="background">
-<h1>ImagiGames</h1>
-<div id="menu_bar">
-<table>
-  <tr>
-    <th>*Mustachio*</th>
-    <th>*Snap'ic*</th>
-    <th>*Memimage*</th>
-    <th>*<%= link_to 'Instacollage', collages_path %>*</th>
-    <th>*<%= link_to 'Facebookline', facebook_api_path %>* (<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a> first)</th>
-  </tr>
-</div>
 
-<% @contacts.each do |contact| %>
-  <tr>
-    <td><%= contact.name %></td>
-    <td><%= link_to 'Show', contact %></td>
-    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
+  <h1>ImagiGames</h1>
+    <p id="home_logo"><%= link_to image_tag('/camera.png'), root_path %></p>
+  <div id="menu_bar">
+  <table>
+    <tr>
+      <th>*Mustachio*</th>
+      <th>*Snap'ic*</th>
+      <th>*Memimage*</th>
+      <th>*<%= link_to 'Instacollage', collages_path %>*</th>
+      <th>*<%= link_to 'Facebookline', facebook_api_path %>* (<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a> first)</th>
+    </tr>
+  </table>
+  </div>
 
 
      
-<div class="heart"> </div>
-<div class="text"></div>
+  <div class="heart"> </div>
+  <div class="text"></div>
 
-  </div>
+</div>

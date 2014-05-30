@@ -4,15 +4,23 @@ height: 84.59%;
 }
 
 .user_banner {
-  background-color: #ff7373;
+  background-color: #df333f;
+  text-align: center;
+}
+
+#home_logo {
+  display: inline-block;
 }
 
 
+#user_info {
+  float: left;
+}
+
 
 .heart {
-  margin-top: -30px;
   content:url(/heart.png);
-  margin-left: 30%;
+  
 }
 
 .text {
@@ -25,7 +33,7 @@ h1 {
   font-weight: bold;
   font-family: Adobe Naskh;
   color: #57433a;
-  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #menu_bar {

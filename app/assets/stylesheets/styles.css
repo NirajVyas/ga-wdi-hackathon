@@ -1,5 +1,49 @@
+
 body {
   text-align: center;
+
+.background {
+background-color: #df333f;
+height: 84.59%;
+}
+
+.user_banner {
+  background-color: #ff7373;
+}
+
+
+
+.heart {
+  margin-top: -30px;
+  content:url(/heart.png);
+  margin-left: 30%;
+}
+
+.text {
+  content:url(/text.png);
+  margin-left: 12%;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-family: Adobe Naskh;
+  color: #57433a;
+  padding-top: 15px;
+}
+
+#menu_bar {
+  margin: auto;
+  width: 850px;
+}
+
+.img_background1 {
+  padding: 10px;
+  background-color: #fcc;
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+
 }
 #collage {
   display: inline-block;
@@ -22,3 +66,4 @@ body {
 .item #large {
   width: 400px;
 }
+

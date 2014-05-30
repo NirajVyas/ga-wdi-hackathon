@@ -11,21 +11,23 @@
 
 </head>
 <body>
+  <div class="user_banner">
 <% if current_user %>
-    <%= current_user.email %>
-    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
     <img id="user_image" src="<%= current_user.image %>" />
+    <%= current_user.email %>
+    <%= link_to image_tag('/logout1.png'), destroy_user_session_path, method: :delete %>
+    <%= link_to image_tag('/home3.png'), root_path %>
   <% else %>
     <%= link_to 'sign in', new_user_session_path %>
     <%= link_to 'sign up', new_user_registration_path %>
 
   <% end %>
 
-
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
 <%= yield %>
+</div>
 
 </body>
 </html>

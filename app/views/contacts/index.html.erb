@@ -1,12 +1,15 @@
-<h1>Listing contacts</h1>
-
+<div class="background">
+<h1>ImagiGames</h1>
+<div id="menu_bar">
 <table>
   <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>*Mustachio*</th>
+    <th>*Snap'ic*</th>
+    <th>*Memimage*</th>
+    <th>*<%= link_to 'Instacollage', collages_path %>*</th>
+    <th>*<%= link_to 'Facebookline', facebook_api_path %>* (<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a> first)</th>
   </tr>
+</div>
 
 <% @contacts.each do |contact| %>
   <tr>
@@ -20,9 +23,10 @@
 
 <br />
 
-<%= link_to 'New Contact', new_contact_path %>
-<%= link_to 'instagram_api', instagram_api_path %>
-<%= link_to 'facbook pics!', facebook_api_path %>
-<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a>
 
 
+     
+<div class="heart"> </div>
+<div class="text"></div>
+
+  </div>

@@ -68,3 +68,16 @@ h1 {
   width: 400px;
 }
 
+.imagebox {
+  position: relative;
+}
+
+.pin {
+  content: url('/pin2.png');
+  width:30px;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+
+}
+

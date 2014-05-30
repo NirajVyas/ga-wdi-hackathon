@@ -8,8 +8,9 @@
   <% @photos.each do |photo| %>
 
       <div class="item">
-        <div id="<%= @div_classes.sample %>">
+        <div class="imagebox" id="<%= @div_classes.sample %>">
             <img src="<%= photo.image_url %>">
+            <div class="pin"></div>
         </div>
       </div>
 

@@ -2,6 +2,7 @@ class CollagesController < ApplicationController
 
 def index
    @photos = Collagephoto.where("user_id = #{current_user.id}")
+   @div_classes = ['small', 'small', 'small', 'medium', 'medium', 'medium', 'medium', 'large']
 end
 
 def create

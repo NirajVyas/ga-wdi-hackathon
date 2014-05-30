@@ -43,11 +43,13 @@ h1 {
   font-family: Adobe Naskh;
   color: #57433a;
   padding-bottom: 15px;
+  font-size: 45px;
 }
 
 #menu_bar {
   margin: auto;
   width: 850px;
+  padding-top: 130px;
 }
 
 .img_background1 {

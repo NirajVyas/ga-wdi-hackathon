@@ -1,5 +1,6 @@
 <h1>ImagiGames</h1>
 
+<div id="menu_bar">
 <table>
   <tr>
     <th>*Mustachio*</th>
@@ -8,6 +9,7 @@
     <th>*<%= link_to 'Instacollage', collages_path %>*</th>
     <th>*<%= link_to 'Facebookline', facebook_api_path %>* (<a href="https://graph.facebook.com/oauth/authorize?client_id=<%= ENV['AUTH_FACEBOOK_KEY'] %>&redirect_uri=http://localhost:3000/apicalls/facebook_auth&scope=user_photos,user_videos,publish_stream">authorize facebook</a> first)</th>
   </tr>
+</div>
 
 <% @contacts.each do |contact| %>
   <tr>

@@ -12,9 +12,9 @@
 </head>
 <body>
 <% if current_user %>
+    <img id="user_image" src="<%= current_user.image %>" />
     <%= current_user.email %>
     <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-    <img id="user_image" src="<%= current_user.image %>" />
     <%= link_to 'home', root_path %>
   <% else %>
     <%= link_to 'sign in', new_user_session_path %>

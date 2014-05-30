@@ -79,4 +79,11 @@
         padding-bottom: 25%;
       }
     }
-    
+
+.collage {
+  content:url(/collage.png);
+  width: 15%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}

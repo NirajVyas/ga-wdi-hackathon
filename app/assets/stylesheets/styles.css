@@ -22,6 +22,10 @@ height: 84.59%;
 
 h1 {
   text-align: center;
+  font-weight: bold;
+  font-family: Adobe Naskh;
+  color: #57433a;
+  padding-top: 15px;
 }
 
 #menu_bar {

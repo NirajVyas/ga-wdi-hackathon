@@ -3,6 +3,12 @@ background-color: #df333f;
 height: 84.59%;
 }
 
+.user_banner {
+  background-color: #ff7373;
+}
+
+
+
 .heart {
   margin-top: -30px;
   content:url(/heart.png);

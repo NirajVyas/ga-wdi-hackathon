@@ -1,3 +1,19 @@
+.background {
+background-color: #df333f;
+height: 84.59%;
+}
+
+.heart {
+  margin-top: -30px;
+  content:url(/heart.png);
+  margin-left: 30%;
+}
+
+.text {
+  content:url(/text.png);
+  margin-left: 12%;
+}
+
 h1 {
   text-align: center;
 }

@@ -28,12 +28,14 @@ height: 84.59%;
 
 .heart {
   content:url(/heart.png);
+  display: inline;
   
 }
 
 .text {
   content:url(/text.png);
-  margin-left: 12%;
+  display: inline;
+  padding-top: 55px;
 }
 
 h1 {

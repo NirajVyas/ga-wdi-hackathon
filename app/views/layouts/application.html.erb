@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contacts</title>
+  <title>ImagiGames</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-    <link rel="stylesheet" type="text/css" href="foundation.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
 
 
 </head>
@@ -17,6 +15,7 @@
       <img id="user_image" src="<%= current_user.image %>" />
       <%= current_user.email %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <p id="home_logo"><%= link_to image_tag('/camera.png'), root_path %></p>
     </div>
     
   <% else %>
@@ -25,11 +24,11 @@
 
   <% end %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
 <%= yield %>
 </div>
+
+<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 </body>
 </html>

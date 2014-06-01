@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   text-align: center;
@@ -25,25 +28,30 @@ height: 84.59%;
 
 .heart {
   content:url(/heart.png);
+  display: inline;
   
 }
 
 .text {
   content:url(/text.png);
-  margin-left: 12%;
+  display: inline;
+  padding-top: 55px;
 }
 
 h1 {
+  margin-top: 0;
   text-align: center;
   font-weight: bold;
   font-family: Adobe Naskh;
   color: #57433a;
   padding-bottom: 15px;
+  font-size: 45px;
 }
 
 #menu_bar {
   margin: auto;
   width: 850px;
+  padding-top: 130px;
 }
 
 .img_background1 {
